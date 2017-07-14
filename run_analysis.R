@@ -67,4 +67,4 @@ fin_melted <- melt(fin, id = c("subject", "activity", "group"))
 tidy <- dcast(fin_melted, subject + activity + group ~ variable, mean)
 
 # saving file
-write.table(tidy, "tidy.txt", row.names = TRUE, quote = FALSE)
+write.table(tidy, "tidy.txt", row.names = FALSE, quote = FALSE)
